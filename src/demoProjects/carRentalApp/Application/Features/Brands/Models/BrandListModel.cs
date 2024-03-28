@@ -10,6 +10,6 @@ namespace Application.Features.Brands.Models
 {
     public class BrandListModel : BasePageableModel
     {
-        IList<BrandListDto> Items { get; set; }
+       public IList<BrandListDto> Items { get; set; }
     }
 }
