@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace Application.Features.Brands.Queries.GetListBrand
 {
-    public class GetListBrandQuery : IRequest<BrandListModel> //Burada BrandistModel yerine bir dto da kullanılabilirdi fakat o zaman yalnızca Bran listesi ile alakalı bilgiler aktarılabilirdi. Burada BranListModel
+    public class GetListBrandQuery : IRequest<BrandListModel> //Burada BrandistModel yerine bir dto da kullanılabilirdi fakat o zaman yalnızca Brand listesi ile alakalı bilgiler aktarılabilirdi. Burada BranListModel
                                                               //oluşturulmasının sebebi Brand listesi ile beraber sayfalamanın da kullanılmak istenmesidir.
     {
         public PageRequest PageRequest { get; set; }
