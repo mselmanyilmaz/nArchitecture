@@ -21,7 +21,7 @@ namespace Domain.Entities
             
         }
 
-        public ProgrammingLanguage(int id, string name, string version, DateTime createdTime)
+        public ProgrammingLanguage(int id, string name, string version, DateTime createdTime) : this()
         {
             Id = id;
             Name = name;

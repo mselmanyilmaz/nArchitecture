@@ -10,6 +10,8 @@ namespace Domain.Entities
     public class Brand : Entity
     {
         public string Name { get; set; }
+        public virtual ICollection<Model> Models { get; set; } //Farklı bir ORM kullanılması gereken bir durumda sıkıntı olmaması için virtual keywoed ü kullanılıyor.
+                                                               //Örn:NHibernate ORM inde bu keywor ün kullanılması gerekiyor.
 
         public Brand()
         {
