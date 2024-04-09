@@ -21,6 +21,7 @@ namespace Persistance
                                                      options.UseSqlServer(
                                                          configuration.GetConnectionString("CarRentalAppConnectionString")));
             services.AddScoped<IBrandRepository, BrandRepository>();
+            services.AddScoped<IModelRepository, ModelRepository>();
 
             return services;
         }
