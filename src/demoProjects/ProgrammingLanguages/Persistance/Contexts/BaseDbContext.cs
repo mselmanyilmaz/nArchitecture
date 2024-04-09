@@ -36,14 +36,33 @@ namespace Persistence.Contexts
                 a.Property(p => p.Name).HasColumnName("Name");
                 a.Property(p => p.Version).HasColumnName("Version");
                 a.Property(p => p.CreatedTime).HasColumnName("CreatedTime");
+                a.Property(p => p.UpdatedTime).HasColumnName("UpdatedTime");
+                a.Property(p => p.DeletedTime).HasColumnName("DeletedTime");
+
+                a.HasMany(p => p.PLTechnologies);
             });
 
+            modelBuilder.Entity<PLTechnology>(a =>
+            {
+                a.ToTable("PLTechnologies").HasKey(p => p.Id);
+                a.Property(p => p.Id).HasColumnName("Id");
+                a.Property(p => p.ProgrammingLanguageId).HasColumnName("ProgrammingLanguageId");
+                a.Property(p => p.Name).HasColumnName("Name");
+                a.Property(p => p.ReleaseTime).HasColumnName("ReleaseTime");
+                a.Property(p => p.CreatedTime).HasColumnName("CreatedTime");
+                a.Property(p => p.UpdatedTime).HasColumnName("UpdatedTime");
+                a.Property(p => p.DeletedTime).HasColumnName("DeletedTime");
 
+                a.HasOne(p => p.ProgrammingLanguage);
+            });
 
             ProgrammingLanguage[] programmingLanguageEntitySeeds = { new(1, "C", "7.0", DateTime.Now), new(2, "Ruby", "4.0" ,DateTime.Now) };
             modelBuilder.Entity<ProgrammingLanguage>().HasData(programmingLanguageEntitySeeds);
 
-           
+            PLTechnology[] pLTechnologyEntitySeeds = { new (1, 1, "Deneme C", Convert.ToDateTime("01/10/1978"), DateTime.Now), new(2, 4, "Deneme Jaava", Convert.ToDateTime("01/10/1998"), DateTime.Now),
+                                                       new (3, 5, "Deneme C++", Convert.ToDateTime("21/10/2002"), DateTime.Now)};
+            modelBuilder.Entity<PLTechnology>().HasData(pLTechnologyEntitySeeds);
+
         }
     }
 }

@@ -11,8 +11,9 @@ namespace Domain.Entities
     {
         public string Name { get; set; }
         public string Version { get; set; }
-        public DateTime CreatedTime { get; set; }
+        public ICollection<PLTechnology> PLTechnologies { get; set; }
 
+        public DateTime CreatedTime { get; set; }
         public DateTime UpdatedTime { get; set;}
         public DateTime DeletedTime { get; set; }
 
