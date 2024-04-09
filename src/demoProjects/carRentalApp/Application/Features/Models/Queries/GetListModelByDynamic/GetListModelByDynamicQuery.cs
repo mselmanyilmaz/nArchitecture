@@ -19,7 +19,7 @@ namespace Application.Features.Models.Queries.GetListModelByDynamic
     {
         public Dynamic Dynamic {  get; set; }
         public PageRequest PageRequest { get; set; }
-
+        
         public class GetListModelByDynamicQueryHandler : IRequestHandler<GetListModelByDynamicQuery, ModelListModel>
         {
             private readonly IMapper _mapper;
