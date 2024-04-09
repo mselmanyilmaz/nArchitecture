@@ -7,6 +7,16 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<Folder Include="Features\PLTechnologies\Commands\CreatePLTechnologies\" />
+		<Folder Include="Features\PLTechnologies\Commands\DeletePLTechnologies\" />
+		<Folder Include="Features\PLTechnologies\Commands\UpdatePLTechnologies\" />
+		<Folder Include="Features\PLTechnologies\Queries\GetByIdPLTechnology\" />
+		<Folder Include="Features\PLTechnologies\Queries\GetListPLTechnology\" />
+		<Folder Include="Features\PLTechnologies\Rules\" />
+		<Folder Include="Features\PLTechnologies\Profiles\" />
+		<Folder Include="Features\PLTechnologies\Constants\" />
+		<Folder Include="Features\PLTechnologies\Dtos\" />
+		<Folder Include="Features\PLTechnologies\Models\" />
 		<Folder Include="Features\ProgrammingLanguages\Constants\" />
 	</ItemGroup>
 
